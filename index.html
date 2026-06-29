@@ -3,9 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DevOps Deployment</title>
+<title>NovaShop - Online Shopping</title>
 
 <style>
+
 *{
 margin:0;
 padding:0;
@@ -14,114 +15,265 @@ font-family:Arial,Helvetica,sans-serif;
 }
 
 body{
-height:100vh;
+background:#f5f5f5;
+}
+
+header{
+background:#111827;
+color:white;
+padding:20px 60px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+}
+
+.logo{
+font-size:30px;
+font-weight:bold;
+color:#00d9ff;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+margin-left:25px;
+font-size:17px;
+transition:.3s;
+}
+
+nav a:hover{
+color:#00d9ff;
+}
+
+.hero{
+height:90vh;
+background:linear-gradient(to right,#111827,#2563eb);
 display:flex;
 justify-content:center;
 align-items:center;
-background:linear-gradient(-45deg,#0f2027,#203a43,#2c5364,#1abc9c);
-background-size:400% 400%;
-animation:bg 10s ease infinite;
-overflow:hidden;
+flex-direction:column;
+color:white;
+text-align:center;
 }
 
-@keyframes bg{
-0%{background-position:0% 50%;}
-50%{background-position:100% 50%;}
-100%{background-position:0% 50%;}
+.hero h1{
+font-size:55px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:22px;
+margin-bottom:30px;
+}
+
+.hero button{
+padding:15px 40px;
+font-size:18px;
+border:none;
+border-radius:8px;
+background:#00d9ff;
+cursor:pointer;
+transition:.4s;
+}
+
+.hero button:hover{
+transform:scale(1.08);
+background:white;
+}
+
+.products{
+padding:70px;
+}
+
+.products h2{
+text-align:center;
+font-size:38px;
+margin-bottom:40px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
 }
 
 .card{
 background:white;
-padding:40px;
-border-radius:20px;
-text-align:center;
-box-shadow:0 15px 35px rgba(0,0,0,.3);
-animation:zoom 1s;
-width:500px;
+padding:20px;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,.15);
+transition:.4s;
 }
 
-@keyframes zoom{
-from{
-transform:scale(.5);
-opacity:0;
-}
-to{
-transform:scale(1);
-opacity:1;
-}
+.card:hover{
+transform:translateY(-10px);
 }
 
-h1{
-color:#27ae60;
-font-size:36px;
-margin-bottom:20px;
+.card img{
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:10px;
 }
 
-h2{
-color:#333;
-margin-bottom:20px;
+.card h3{
+margin-top:15px;
 }
 
-.info{
-font-size:18px;
-margin:10px;
-color:#444;
-}
-
-.success{
+.price{
+color:#2563eb;
 font-size:22px;
-color:#e74c3c;
+margin:15px 0;
 font-weight:bold;
-margin-top:20px;
-animation:blink 1s infinite;
 }
 
-@keyframes blink{
-50%{
-opacity:.4;
-}
+.card button{
+width:100%;
+padding:12px;
+background:#111827;
+color:white;
+border:none;
+border-radius:8px;
+cursor:pointer;
 }
 
-.footer{
-margin-top:30px;
-color:#666;
-font-size:14px;
+.card button:hover{
+background:#2563eb;
 }
+
+.features{
+display:flex;
+justify-content:space-around;
+flex-wrap:wrap;
+padding:70px;
+background:white;
+}
+
+.box{
+width:250px;
+text-align:center;
+padding:20px;
+}
+
+.box h3{
+margin:15px 0;
+}
+
+footer{
+background:#111827;
+color:white;
+text-align:center;
+padding:30px;
+margin-top:50px;
+}
+
 </style>
 
 </head>
 
 <body>
 
+<header>
+
+<div class="logo">
+NovaShop
+</div>
+
+<nav>
+<a href="#">Home</a>
+<a href="#">Products</a>
+<a href="#">Offers</a>
+<a href="#">About</a>
+<a href="#">Contact</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h1>Shop Smart. Live Better.</h1>
+
+<p>Premium Shopping Experience Powered by Jenkins + Docker + GitHub CI/CD</p>
+
+<button>Shop Now</button>
+
+</section>
+
+<section class="products">
+
+<h2>Trending Products</h2>
+
+<div class="grid">
+
 <div class="card">
-
-<h1>🚀 DevOps Deployment Successful</h1>
-
-<h2>Jenkins + Docker + GitHub + MySQL</h2>
-
-<div class="info">✅ Jenkins Pipeline Executed Successfully</div>
-
-<div class="info">✅ Docker Image Built Successfully</div>
-
-<div class="info">✅ Docker Container Running</div>
-
-<div class="info">✅ GitHub Repository Connected</div>
-
-<div class="info">✅ MySQL Container Running</div>
-
-<div class="info">✅ CI/CD Deployment Completed</div>
-
-<div class="success">
-🎉 AUTO DEPLOYMENT WORKING PERFECTLY 🎉
+<img src="https://picsum.photos/400/300?1">
+<h3>Wireless Headphones</h3>
+<div class="price">₹2,999</div>
+<button>Buy Now</button>
 </div>
 
-<div class="footer">
-Created by <b>Soundararajan</b>
-<br><br>
-DevOps Project Demo
+<div class="card">
+<img src="https://picsum.photos/400/300?2">
+<h3>Smart Watch</h3>
+<div class="price">₹4,999</div>
+<button>Buy Now</button>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/400/300?3">
+<h3>Laptop</h3>
+<div class="price">₹59,999</div>
+<button>Buy Now</button>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/400/300?4">
+<h3>Gaming Keyboard</h3>
+<div class="price">₹1,999</div>
+<button>Buy Now</button>
 </div>
 
 </div>
+
+</section>
+
+<section class="features">
+
+<div class="box">
+<h3>🚚 Free Delivery</h3>
+<p>Free shipping across India.</p>
+</div>
+
+<div class="box">
+<h3>💳 Secure Payment</h3>
+<p>100% Safe Payment Gateway.</p>
+</div>
+
+<div class="box">
+<h3>🔄 Easy Returns</h3>
+<p>7 Days Replacement Policy.</p>
+</div>
+
+<div class="box">
+<h3>⭐ Premium Quality</h3>
+<p>Trusted by 1 Million Customers.</p>
+</div>
+
+</section>
+
+<footer>
+
+<h2>Deployment Successful ✅</h2>
+
+<p>GitHub → Jenkins → Docker → Amazon EC2</p>
+
+<p>CI/CD Pipeline Running Successfully</p>
+
+<p>© 2026 NovaShop</p>
+
+</footer>
 
 </body>
 </html>
