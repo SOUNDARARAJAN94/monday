@@ -1,7 +1,5 @@
-FROM eclipse-temurin:17-jdk
+FROM nginx:latest
 
-COPY target/app.jar app.jar
+COPY index.html /usr/share/nginx/html/index.html
 
-EXPOSE 8081
-
-ENTRYPOINT ["java","-jar","app.jar"]
+EXPOSE 80
