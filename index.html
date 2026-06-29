@@ -1,14 +1,127 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Company</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DevOps Deployment</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(-45deg,#0f2027,#203a43,#2c5364,#1abc9c);
+background-size:400% 400%;
+animation:bg 10s ease infinite;
+overflow:hidden;
+}
+
+@keyframes bg{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+.card{
+background:white;
+padding:40px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 15px 35px rgba(0,0,0,.3);
+animation:zoom 1s;
+width:500px;
+}
+
+@keyframes zoom{
+from{
+transform:scale(.5);
+opacity:0;
+}
+to{
+transform:scale(1);
+opacity:1;
+}
+}
+
+h1{
+color:#27ae60;
+font-size:36px;
+margin-bottom:20px;
+}
+
+h2{
+color:#333;
+margin-bottom:20px;
+}
+
+.info{
+font-size:18px;
+margin:10px;
+color:#444;
+}
+
+.success{
+font-size:22px;
+color:#e74c3c;
+font-weight:bold;
+margin-top:20px;
+animation:blink 1s infinite;
+}
+
+@keyframes blink{
+50%{
+opacity:.4;
+}
+}
+
+.footer{
+margin-top:30px;
+color:#666;
+font-size:14px;
+}
+</style>
+
 </head>
 
 <body>
 
-<h1>Jenkins + Docker + MySQL</h1>
+<div class="card">
 
-<p>Deployment Successful</p>
+<h1>🚀 DevOps Deployment Successful</h1>
+
+<h2>Jenkins + Docker + GitHub + MySQL</h2>
+
+<div class="info">✅ Jenkins Pipeline Executed Successfully</div>
+
+<div class="info">✅ Docker Image Built Successfully</div>
+
+<div class="info">✅ Docker Container Running</div>
+
+<div class="info">✅ GitHub Repository Connected</div>
+
+<div class="info">✅ MySQL Container Running</div>
+
+<div class="info">✅ CI/CD Deployment Completed</div>
+
+<div class="success">
+🎉 AUTO DEPLOYMENT WORKING PERFECTLY 🎉
+</div>
+
+<div class="footer">
+Created by <b>Soundararajan</b>
+<br><br>
+DevOps Project Demo
+</div>
+
+</div>
 
 </body>
 </html>
